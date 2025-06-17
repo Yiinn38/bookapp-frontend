@@ -27,39 +27,39 @@ const onCancel = () => {
 </script>
 
 <template>
-  <div v-if="show" class="fixed inset-0 backdrop-blur-lg flex items-center justify-center z-50 text-zinc-600">
+  <div v-if="show" class="fixed inset-0 backdrop-blur-lg flex items-center justify-center text-zinc-600 z-50">
     <div class="bg-white rounded-lg p-4 w-full max-w-lg">
-      <h2 class="text-xl font-bold mb-4">Editar libro</h2>
+      <h2 class="text-xl font-bold mb-4">Editing the {{book.title}} book</h2>
 
       <form @submit.prevent="onSave" class="flex flex-col gap-3">
         <label>
-          Titulo:
+          Title:
           <input v-model="editedBook.title" type="text" class="border-2 border-cyan-700 rounded p-2 w-full" required />
         </label>
         <label>
-          Autor:
+          Author:
           <input v-model="editedBook.author" type="text" class="border-2 border-cyan-700 rounded p-2 w-full" required />
         </label>
         <label>
-          Categoría:
+          Category:
           <input v-model="editedBook.category" type="text" class="border-2 border-cyan-700 rounded p-2 w-full" required />
         </label>
         <label>
-          Año:
+          Year:
           <input v-model.number="editedBook.year" type="number" class="border-2 border-cyan-700 rounded p-2 w-full" required />
         </label>
         <label>
-          Páginas:
+          Pages:
           <input v-model.number="editedBook.numPage" type="number" class="border-2 border-cyan-700 rounded p-2 w-full" required />
         </label>
         <label>
-          Código de barras:
+          Bar-Code:
           <input v-model="editedBook.barCode" type="text" class="border-2 border-cyan-700 rounded p-2 w-full" required>
         </label>
 
         <div class="flex justify-end gap-3 mt-4">
-          <button type="button" @click="onCancel" class="px-4 py-2 bg-gray-300 rounded cursor-pointer hover:bg-red-700 hover:text-white">Cancelar</button>
-          <button type="submit" class="px-4 py-2 bg-cyan-700 text-white rounded cursor-pointer hover:bg-cyan-600">Guardar</button>
+          <button type="button" @click="onCancel" class="px-4 py-2 bg-gray-300 rounded cursor-pointer transition duration-300 ease-in-out hover:bg-red-800 hover:text-white">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-cyan-700 text-white rounded cursor-pointer transition duration-300 ease-in-out hover:bg-cyan-600">Save</button>
         </div>
       </form>
     </div>

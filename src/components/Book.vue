@@ -7,7 +7,7 @@ const emit = defineEmits(["edit", "delete"]);
 </script>
 
 <template>
-  <div class="flex border-2 px-2 py-2 rounded-lg border-cyan-700 items-center justify-between transition duration-300 ease-in-out hover:border-cyan-200">
+  <div class="flex border-2 p-2 rounded-lg border-cyan-700 items-center justify-between transition duration-300 ease-in-out hover:border-cyan-200">
     <div class="flex items-center h-full w-full gap-4">
       <div class="bg-cyan-700 rounded-lg h-25 p-4 mr-4 justify-center items-center">
         <svg
@@ -31,10 +31,10 @@ const emit = defineEmits(["edit", "delete"]);
         </svg>
       </div>
       <div class="flex gap-6 w-full items-center">
-        <div class="w-[70%] text-cyan-700">
-          <h1 class="text-4xl text-cyan-200 font-bold">{{ book.title }}</h1>
+        <div class="w-[70%] text-cyan-600">
+          <h1 class="text-4xl text-white font-bold">{{ book.title }}</h1>
           <p>{{ book.author }}</p>
-          <p class="opacity-40">{{ book.barCode }}</p>
+          <p class="opacity-70">{{ book.barCode }}</p>
         </div>
 
         <div class="w-[30%] ml-auto text-right mr-8">

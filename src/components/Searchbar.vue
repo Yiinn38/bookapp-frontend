@@ -11,7 +11,7 @@ const clearSearch = () => {
   <div class="relative w-full max-w-md m-4">
     <input v-model="search" type="text" placeholder="Buscar por categoría" class="w-full border p-2 pr-16 rounded-3xl" />
 
-    <button v-if="search" @click="clearSearch" class="absolute right-16 top-1/2 -translate-y-1/2 text-gray-500 hover:text-red-500" aria-label="Limpiar búsqueda">✕</button>
+    <button v-if="search" @click="clearSearch" class="absolute right-16 top-1/2 -translate-y-1/2 text-gray-500 hover:text-red-800" aria-label="Limpiar búsqueda">✕</button>
 
     <div class="absolute top-1/2 -translate-y-1/2 bg-gray-200 rounded-full p-2 flex items-center justify-center cursor-default w-10 h-10 right-[-10px]">
       <svg
