@@ -34,13 +34,13 @@ const emit = defineEmits(["edit", "delete"]);
         <div class="w-[70%] text-cyan-600">
           <h1 class="text-4xl text-white font-bold">{{ book.title }}</h1>
           <p>{{ book.author }}</p>
-          <p class="opacity-70">{{ book.barCode }}</p>
+          <p class="opacity-70">{{ book.barcode }}</p>
         </div>
 
         <div class="w-[30%] ml-auto text-right mr-8">
           <p>Categoría: {{ book.category }}</p>
           <p>Año: {{ book.year }}</p>
-          <p>Páginas: {{ book.numPage }}</p>
+          <p>Páginas: {{ book.numpages }}</p>
         </div>
       </div>
     </div>

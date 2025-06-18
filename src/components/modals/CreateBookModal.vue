@@ -1,9 +1,6 @@
 <script setup>
 import { defineProps, defineEmits, ref } from "vue";
-
-const props = defineProps({
-  show: Boolean,
-});
+const props = defineProps({ show: Boolean });
 const emit = defineEmits(["close", "create"]);
 
 const newBook = ref({
@@ -11,8 +8,7 @@ const newBook = ref({
   author: "",
   category: "",
   year: null,
-  numPage: null,
-  barCode: "",
+  numpages: null,
 });
 
 const resetForm = () => {
@@ -21,8 +17,7 @@ const resetForm = () => {
     author: "",
     category: "",
     year: null,
-    numPage: null,
-    barCode: "",
+    numpages: null,
   };
 };
 
@@ -55,22 +50,17 @@ const onCancel = () => {
 
         <label>
           Category:
-          <input v-model="newBook.category" type="text" class="border-2 border-cyan-700 rounded p-2 w-full" required/>
+          <input v-model="newBook.category" type="text" class="border-2 border-cyan-700 rounded p-2 w-full" required />
         </label>
 
         <label>
           Year:
-          <input v-model.number="newBook.year" type="number" class="border-2 border-cyan-700 rounded p-2 w-full" required/>
+          <input v-model.number="newBook.year" type="number" class="border-2 border-cyan-700 rounded p-2 w-full" required />
         </label>
 
         <label>
           Pages:
-          <input v-model.number="newBook.numPage" type="number" class="border-2 border-cyan-700 rounded p-2 w-full" required/>
-        </label>
-
-        <label>
-          Bar-Code:
-          <input v-model="newBook.barCode" type="text" class="border-2 border-cyan-700 rounded p-2 w-full" required/>
+          <input v-model.number="newBook.numPage" type="number" class="border-2 border-cyan-700 rounded p-2 w-full" required />
         </label>
 
         <div class="flex justify-end gap-3 mt-4">
